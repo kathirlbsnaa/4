@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        div{
+            background-color: white;
+            color:black;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        body{
+            background-color: black;
+        }
+    </style>
+    <script >
+        function over(x){
+            x.style.height="64px";
+            x.style.width="64px";
+        }
+        function out(x){
+            x.style.height="50%";
+            x.style.width="50%";
+        }
+        function move(x){
+            x.style.backgroundColor="pink";
+            x.style.color="purple";
+        }
+        function leave(x){
+            x.style.backgroundColor="white";
+            x.style.color="black";
+        }
+    </script>
+</head>
+<body>
+    <center>
+    <div>
+        <img src="logo.jpg" width="10%" height="10%">
+        <h1 onmousemove="move(this)"onmouseleave="leave(this)">ONLINE PHARMACY</h1>
+    </div>
+    <img onmouseover="over(this)" onmouseout="out(this)" src="phar.jpg" width="50%" height="50%"><br>
+    <a href="order.html"><input type="submit"  value="ORDER" style="font-size: xx-large;font-family: Arial, Helvetica, sans-serif;"></a>
+    </center>
+</body>
+</html>

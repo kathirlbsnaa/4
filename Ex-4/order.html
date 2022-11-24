@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Medicine Order</title>
+        <style>
+            body{
+            background-image: url("calcu.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <center>
+        <h1 style="size:10px;font-weight: bolder;text-align: center;">ORDER MEDICINE</h1>
+            <b>NAME:</b><input type="text"  onfocus="this.style.backgroundColor='yellow'"
+            onblur="this.style.backgroundColor='whitesmoke'"><br><br>
+            <b>AGE:</b><input type="number" onfocus="this.style.backgroundColor='yellow'" name="age"><br><br>
+            <b>DOB:</b><input type="date"><br><br>
+            <b>GENDER:</b><br><br>
+            <input type="radio" name="radio1"value="Male">Male <br>
+            <input type="radio" name="radio1"value="Female">Female  <br>
+            <input type="radio" name="radio1"value="Others">Others<br><BR>
+            <b>PHONE NO:</b><input type="number" name="number"><br><br>
+            <b>EMAIL:</b><input type="email" id="on" oninput="fun1()"><br><br>
+            <p id="demo"></p>
+            <b>ADDRESS:</b><br>
+            <textarea  cols="50%"rows="10%" name="address"  onfocus="this.style.backgroundColor='yellow'"
+            onblur="this.style.backgroundColor='whitesmoke'"></textarea><br><br>
+            <b>LIST OF MEDICINES</b><br>
+            <input type="checkbox"name="checkbox1" >PARACETAMOL<br><br>
+            <input type="checkbox"name="checkbox2">DOLO 650<br><br>
+            <input type="checkbox"name="checkbox3">KALPOL<br><br>
+            <input type="checkbox"name="checkbox4">SAREDON<br><br>
+            <input type="checkbox"name="checkbox5">COUGH SYRUB<br><br>
+            <button onclick="fun()">SUBMIT</button>
+            <button onclick="fun2()">RESET</button>
+        </center>
+        <script>
+            function fun()
+            {
+                alert("Ordered Sucessfully!!!!");
+            }
+            function fun1()
+            {
+                let n=document.getElementById("on").value;
+                document.getElementById("demo").innerHTML="You Type as: "+n;
+            }
+            function fun2()
+            {
+                alert("Rseted Sucessfully!!!!");
+            }
+        </script>
+    </body>
+</html>
